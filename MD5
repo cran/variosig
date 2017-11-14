@@ -1,0 +1,11 @@
+1bbd7adc1df8c82c67404b65b980eeb3 *DESCRIPTION
+1a8edac93a1db172952983f01d74157b *NAMESPACE
+2433487b0ca61ca0c3c00a5316bfb34f *R/envelope.R
+50aaa0c2f986492461d4c6ac80c515c4 *R/envplot.R
+717a4d61c11a5d4bf92b1934b0bf1dd6 *R/envsig.R
+80bb5bdf8bc8da19783a1a13108ecb69 *inst/NEWS
+fa19243271b39786084199bcbdbff95b *man/envelope.Rd
+10c0c3959c2ec91b4f362c01439edfd2 *man/envplot.Rd
+3216a39e6479ed1a04ec9303cae3b56b *man/envsig.Rd
+b61195da6170a5e834b8d8a5038f29b4 *man/variosig-package.Rd
+4df595d9951f908dbf4be0c7ee50f961 *tests/testthat/test.R
