@@ -1,4 +1,4 @@
-envplot <- function(envlist, shade = TRUE, shade.color = "lightgrey",
+envplot <- function(envlist, shade = TRUE, shade.color = "lightgrey", show.variance = FALSE,
                     # out.point = list(pch = 20, col = "red"), in.point = list(pch = 20, col = "black"),
                     xlim = NULL, ylim = NULL, main = NULL,
                     xlab = "Distance", ylab = "Semivariance"){
@@ -39,6 +39,11 @@ envplot <- function(envlist, shade = TRUE, shade.color = "lightgrey",
            #         c(list(x=envlist$variogram0$dist[idx], y=envlist$variogram0$gamma[idx]), out.point))
            points(envlist$variogram0$dist[-idx], envlist$variogram0$gamma[-idx],pch=20)
            points(envlist$variogram0$dist[idx], envlist$variogram0$gamma[idx], pch=20, col="red")
+           if (show.variance){
+             abline(h=var(envlist$dataValues))
+             abline(h=var(envlist$dataValues) +
+                      qnorm(c(1-envlist$conf.level/2,envlist$conf.level/2))*sd(envlist$dataValues), col="blue")
+           }
            outside <- length(idx)
            total <- length(envlist$variogram0$dist)
          },
@@ -62,6 +67,11 @@ envplot <- function(envlist, shade = TRUE, shade.color = "lightgrey",
                     which(envlist$variogram0$v > envlist$upper))
            points(envlist$variogram0$u[-idx], envlist$variogram0$v[-idx],pch=20)
            points(envlist$variogram0$u[idx], envlist$variogram0$v[idx], pch=20, col="red")
+           if (show.variance){
+             abline(h=var(envlist$dataValues))
+             abline(h=var(envlist$dataValues) +
+                      qnorm(c(1-envlist$conf.level/2,envlist$conf.level/2))*sd(envlist$dataValues), col="blue")
+           }
            outside <- length(idx)
            total <- length(envlist$variogram0$u)
          })

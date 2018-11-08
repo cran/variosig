@@ -18,8 +18,8 @@ expect_that(perm, is_a("list"))
 expect_that(envsig(perm), is_a("list"))
 expect_that(envplot(perm), is_a("character"))
 
-data(meuse)
-meuse <- as.geodata(meuse, coords.col = 1:2, data.col = 6, covar.col = 3:5)
+meuse <- as.geodata(obj = meuse, data.col = 4, covar.col = 1:3,
+                    covar.names = c("cadmium", "copper","lead"))
 meuse$data <- log(meuse$data)
 vario2 <- variog(meuse,max.dist=1500)
 perm2 <- envelope(vario2, meuse, nsim=9, max.dist=1500)
@@ -27,8 +27,4 @@ expect_that(perm2, is_a("list"))
 expect_that(envsig(perm2), is_a("list"))
 expect_that(envplot(perm2), is_a("character"))
 
-vario3 <- variog(meuse,trend = trend.spatial(~lead, meuse),max.dist=1500)
-perm3 <- envelope(vario3, meuse, trend = trend.spatial(~lead, meuse),nsim=9, max.dist=1500)
-expect_that(perm3, is_a("list"))
-expect_that(envsig(perm3), is_a("list"))
-expect_that(envplot(perm3), is_a("character"))
+

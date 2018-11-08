@@ -9,8 +9,8 @@ Apply Monte Carlo permutation to compute pointwise variogram envelopes, and chec
 \tabular{ll}{
 Package: \tab variosig\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2017-11-11\cr
+Version: \tab 0.2\cr
+Date: \tab 2018-11-08\cr
 License: \tab GPL (>= 3) \cr
 LazyLoad: \tab yes\cr
 }}

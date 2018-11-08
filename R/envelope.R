@@ -25,6 +25,7 @@ envelope.gstatVariogram <- function(vario, data, locations = coordinates(data), 
 
   simulation$upper <- apply(simulation$variogram, 1, quantile, probs = 1-(1-conf.level)/2)
   simulation$lower <- apply(simulation$variogram, 1, quantile, probs = (1-conf.level)/2)
+  simulation$dataValues <- dataValues
   simulation$variogram0 <- variogramDefault
   simulation$conf.level <- conf.level
   if (!save.sim){simulation$data <- NULL}
@@ -52,6 +53,7 @@ envelope.variogram <- function(vario, data, locations = data$coords, trend = NUL
 
   simulation$upper <- apply(simulation$variogram, 1, quantile, probs = 1-(1-conf.level)/2)
   simulation$lower <- apply(simulation$variogram, 1, quantile, probs = (1-conf.level)/2)
+  simulation$dataValues <- dataValues
   simulation$variogram0 <- variogramDefault
   simulation$conf.level <- conf.level
   if (!save.sim){simulation$data <- NULL}

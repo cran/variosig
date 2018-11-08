@@ -34,6 +34,7 @@ A list with the following elements:
 \item{variogram}{the variogram estimates from each of the permutations}
 \item{upper}{upper quantile of the variogram estimates according to the confidence level}
 \item{lower}{lower quantile of the variogram estimates according to the confidence level}
+\item{dataValues}{the values used for variogram estimation, namely the residuals after removing covariates' effect}
 \item{variogram0}{the original variogram supplied via \code{vario} argument}
 }
 
@@ -45,7 +46,7 @@ Diggle, P.J., Ribeiro, P.J. (2007), Model-Based Geostatistics, Springer Series i
 \code{\link{envplot}} to plot an empirical variogram based on the data and its envelope
 }
 \examples{
-
+\dontrun{
 library(sp)
 data(meuse)
 
@@ -65,6 +66,5 @@ meuse <- as.geodata(meuse, coords.col = 1:2, data.col = 6, covar.col = 3:5)
 meuse$data <- log(meuse$data)
 vario0 <- variog(meuse,max.dist=1500)
 varioEnv <- envelope(vario0, data = meuse, trend = trend.spatial(~lead, meuse), nsim = 99)
-}
-
+}}
 \keyword{models}

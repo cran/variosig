@@ -28,6 +28,7 @@ Diggle, P.J., Ribeiro, P.J. (2007), Model-Based Geostatistics, Springer Series i
 \code{\link{envelope}} to generate Monte Carlo permutations for computing the envelope.
 }
 \examples{
+\dontrun{
 library(sp)
 data(meuse)
 coordinates(meuse) = ~x+y
@@ -35,4 +36,5 @@ vario0 <- gstat::variogram(log(zinc)~1, meuse)
 varioEnv <- envelope(vario0, data = meuse, formula = log(zinc)~1, nsim = 999)
 envplot(varioEnv)
 envsig(varioEnv, adjustment = "holm")
+}
 }
