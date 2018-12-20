@@ -1,7 +1,0 @@
-version 0.2:
-
-* added option to show sample variance and its confidence interval without considering spatial information (thanks to Reinhard)
-
-version 0.1:
-
-* initial release on CRAN
