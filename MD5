@@ -1,6 +1,6 @@
-f64e10139f81cbda68ff5921f04cdd89 *DESCRIPTION
-6eed7814fbcb9b98f12ddeda0be40704 *NAMESPACE
-5ad10afd5c4e726c0ef4d4433ce5653e *R/envelope.R
+a950e330a283c7bb012e42eed1b341ed *DESCRIPTION
+f00efda8e6b0cb6dc9b59ee237cf3f43 *NAMESPACE
+c3e2ed344dfec1bd99b6d63e24ce1276 *R/envelope.R
 f4bc7de41bd466d5ceecbd93d297eb47 *R/envplot.R
 1179c469978dd63a05a5691e4d65b762 *R/envsig.R
 6b358a41de0648725c24eccfe2527a35 *inst/CITATION
@@ -8,6 +8,6 @@ cd5fd5e9484b56e3a53c4949c8cf0f14 *inst/NEWS.md
 5165d6beece56c7a2a7f5ba1b4aa376f *man/envelope.Rd
 484a84a7ea248a2af4c521a7ce4855d1 *man/envplot.Rd
 8abe7d3fd406629c4a0b88b06b80f4d7 *man/envsig.Rd
-7d50fd36d0b1afc79dfce4de1d2be5bf *man/variosig-package.Rd
-87f9b9b0771f0b4c62eb31eb7c7b3032 *tests/testthat/Rplots.pdf
-d35e5245c5663961786708f9703f6839 *tests/testthat/test.R
+f62a9d7984d0d2c9546e42325f0e9405 *man/variosig-package.Rd
+6e121a7a81324417f1a4aafd5ad7cba0 *tests/testthat/Rplots.pdf
+6f2eaad929ff8c0083b90bfae1d76feb *tests/testthat/test.R
